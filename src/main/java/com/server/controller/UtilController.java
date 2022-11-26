@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.server.entity.Alumno;
+import com.server.entity.Estado;
 import com.server.entity.Grado;
 import com.server.entity.Pais;
 import com.server.entity.Tesis;
 import com.server.service.AlumnoService;
+import com.server.service.EstadoService;
 import com.server.service.GradoService;
 import com.server.service.PaisService;
 import com.server.service.TesisService;
@@ -36,6 +38,9 @@ public class UtilController {
 		
 		@Autowired
 		private TesisService tesisService;
+		
+		@Autowired
+		private EstadoService estadoService;
 		
 		@GetMapping("/grado")
 		@ResponseBody
@@ -62,6 +67,13 @@ public class UtilController {
 		@ResponseBody
 		public ResponseEntity<List<Tesis>>listaTesis(){
 			List<Tesis> lista = tesisService.listaTesis();
+			return ResponseEntity.ok(lista);
+		}
+		
+		@GetMapping("/estado")
+		@ResponseBody
+		public ResponseEntity<List<Estado>>listaEstado(){
+			List<Estado> lista = estadoService.listaEstado();
 			return ResponseEntity.ok(lista);
 		}
 }
