@@ -60,7 +60,6 @@ public class PrestamoController {
 		salida.put("errores", lstMensajes);
 		//
 		obj.setFecha_Registro(new Date());
-		obj.setEstado(1);
 
 		List<ObjectError> lstErrors = errors.getAllErrors();
 		for (ObjectError objectError : lstErrors) {

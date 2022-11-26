@@ -21,8 +21,6 @@ public class Libro {
 
 	private String nombre;
 
-	private int estado;
-
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_Autor")
@@ -42,14 +40,6 @@ public class Libro {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public int getEstado() {
-		return estado;
-	}
-
-	public void setEstado(int estado) {
-		this.estado = estado;
 	}
 
 	public Autor getAutor() {

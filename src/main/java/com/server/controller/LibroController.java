@@ -59,8 +59,7 @@ public class LibroController {
 		Map<String, Object> salida = new HashMap<>();
 		List<String> lstMensajes = new ArrayList<>();
 		salida.put("errores", lstMensajes);
-		//
-		obj.setEstado(1);
+		
 		
 		List<ObjectError> lstErrors = errors.getAllErrors();
 		for (ObjectError objectError : lstErrors) {
