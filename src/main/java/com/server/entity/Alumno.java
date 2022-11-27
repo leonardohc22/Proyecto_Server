@@ -32,7 +32,8 @@ public class Alumno {
 	private String correo;
 	
 	@Temporal(TemporalType.DATE)
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd" , timezone = "America/Lima")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "America/Lima")
+	
 	private Date fecha_Nacimiento;
 
 	@Temporal(TemporalType.TIMESTAMP)
