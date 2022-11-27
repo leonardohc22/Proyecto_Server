@@ -37,7 +37,7 @@ public class Prestamo {
 	private Libro libro;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "America/Lima")
 	private Date fecha_Registro;
 
 	@Temporal(TemporalType.DATE)
